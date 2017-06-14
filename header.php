@@ -1,0 +1,73 @@
+<header class="site-header wow fadeInDown">
+	<div class="container">
+		<div class="header-content">
+			<div class="branding">
+				<img src="images/dolankesini.png" alt="Company Name" class="logo" width="150px">
+				<h1 class="site-title"><a href="index.php">Dolan kesini</a></h1>
+				<small class="site-description">Ayo Dolan Kesini</small>
+			</div>
+			
+			<nav class="main-navigation">
+				<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+				<ul class="menu">
+					<li class="menu-item <?php if (isset($_REQUEST['home'])) { echo "current-menu-item"; }?>"><a href="index.php?home=home">Home</a></li>
+					<li class="menu-item <?php if (isset($_REQUEST['wisata'])) { echo "current-menu-item"; }?>"><a href="paket_wisata.php?wisata=wisata">Paket Wisata</a></li>
+					<li class="menu-item"><a href="kontak.php">Kontak Kami</a></li>
+					<!--<li class="menu-item"><a href="contact.html">Contact</a></li>-->
+				</ul>
+			</nav>
+			
+			<div class="social-links">
+				<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+				<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+				<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+			</div>
+		</div>
+		<?php if(isset($_REQUEST['wisata'])){ 
+			if($_REQUEST['wisata'] == "wisata"){?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<span>paket wisata</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "bromo") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Bromo</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "ijen") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Kawah Ijen</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "ijen_baluran") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Kawah Ijen dan Baluran</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "papuma") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Papuma</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "gili_ketapang") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Gili Ketapang</span>
+				</nav>
+		<?php }elseif ($_REQUEST['wisata'] == "gili_labak") { ?>
+				<nav class="breadcrumbs">
+					<a href="index.php?home=home">Home</a> &rarr;
+					<a href="paket_wisata.php?wisata=wisata">paket wisata</a> &rarr;
+					<span>Gili Labak</span>
+				</nav>
+		<?php }
+		} ?>
+
+	</div>
+</header> <!-- .site-header -->
