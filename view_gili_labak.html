@@ -19,20 +19,55 @@
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/min/plugins-min.js"></script>
+		<script src="js/min/app-min.js"></script>
 	</head>
 
 	<body>
 		
 		<div id="site-content">
 			
-			<?php include "header.php" ?>
+			<header class="site-header wow fadeInDown">
+				<div class="container">
+					<div class="header-content">
+						<div class="branding">
+							<img src="images/dolankesini.png" alt="Company Name" class="logo" width="150px">
+							<h1 class="site-title"><a href="index.php">Dolan kesini</a></h1>
+							<small class="site-description">Ayo Dolan Kesini</small>
+						</div>
+						
+						<nav class="main-navigation">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="index.html">Home</a></li>
+								<li class="menu-item current-menu-item"><a href="paket_wisata.html">Paket Wisata</a></li>
+								<li class="menu-item"><a href="kontak.html">Kontak Kami</a></li>
+								<!--<li class="menu-item"><a href="contact.html">Contact</a></li>-->
+							</ul>
+						</nav>
+						
+						<div class="social-links">
+							<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+							<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+							<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+						</div>
+					</div>
+					<nav class="breadcrumbs">
+						<a href="index.html">Home</a> &rarr;
+						<a href="paket_wisata.html">Paket wisata</a> &rarr;
+						<span>Gili Labak</span>
+					</nav>
+				</div>
+			</header> <!-- .site-header -->
 
 			<main class="content">
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-7 wow fadeInLeft">
-								<h2 class="section-title">Paket Gili Labak</h2>
+								<h2 class="section-title">Gili Labak</h2>
 
 								<h2>Gili Labak</h2>
 								<figure>
@@ -70,12 +105,11 @@
 							</div>
 							<div class="col-md-4 col-md-push-1 wow fadeInRight">
 								<h2 class="section-title">Paket Lainnya</h2>
-								<a href="view_bromo.php?wisata=bromo" class="boxed-link">Bromo</a>
-								<a href="view_papuma.php?wisata=papuma" class="boxed-link">Papuma, Teluk Love, dan Watu Ulo</a>
-								<a href="view_ijen.php?wisata=ijen_baluran" class="boxed-link">Kawah Ijen</a>
-								<a href="view_ijen_baluran.php?wisata=ijen_baluran" class="boxed-link">Kawah Ijen dan Baluran</a>
-								<a href="view_gili_ketapang.php?wisata=gili_ketapang" class="boxed-link">Gili Ketapang</a>
-
+								<a href="view_bromo.html" class="boxed-link">Bromo</a>
+								<a href="view_papuma.html" class="boxed-link">Papuma, Teluk Love, dan Watu Ulo</a>
+								<a href="view_ijen.html" class="boxed-link">Kawah Ijen</a>
+								<a href="view_ijen_baluran.html" class="boxed-link">Kawah Ijen dan Baluran</a>
+								<a href="view_gili_ketapang.html" class="boxed-link">Gili Ketapang</a>
 							</div>
 						</div>
 					</div>
@@ -83,7 +117,12 @@
 				</div>
 			</main> <!-- .content -->
 
-			<?php include "footer.php";?>
+			<div id="footer"></div>
+			<script> 
+			    $(function(){
+			      $("#footer").load("footer.html"); 
+			    });
+			</script> 
 		
 	</body>
 
